@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const image = new Image();
         image.src = imagePath;
         image.onload = function () {
-            console.log(`Image ${imagePath} preloaded`);
+            // console.log(`Image ${imagePath} preloaded`);
             imagesContainer.appendChild(image);
         };
     });
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const audio = new Audio();
     audio.src = audioUrl;
     audio.oncanplaythrough = function () {
-        console.log('Audio preloaded');
+        // console.log('Audio preloaded');
         const audioElement = document.getElementById('preloaded-audio');
         audioElement.src = audioUrl;
         audioElement.style.display = 'block';

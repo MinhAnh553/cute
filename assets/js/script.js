@@ -16,8 +16,13 @@ function changeImage() {
     qualityImage.src = qualityImageMap[selectedQuality];
 
     // Phát nhạc
+    const music = document.getElementById('music');
+    const title = document.querySelector('.title');
     if (selectedQuality == '1080p') {
-        const music = document.getElementById('music');
+        title.classList.remove('hide');
         music.play();
+    } else {
+        title.classList.add('hide');
+        music.pause();
     }
 }
